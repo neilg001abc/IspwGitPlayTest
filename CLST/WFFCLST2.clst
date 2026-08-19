@@ -1,0 +1,4 @@
+/* THIS LITTLE  REXX EXEC HANDLES ALLOCATION OF FILES AT LOGON  */      00010001
+"ALLOC DDN(SYSUDUMP) SYSOUT(X)"                                         00020001
+"ALLOC DDN(SYSPRINT) DSN(*)"                                            00030001
+"ISPF"                                                                  00040001

@@ -1,0 +1,6 @@
+/* REXX */                                                              00010001
+trace r                                                                 00020001
+target='SALESSUP.ISPW.GIT.SOURCE(FRANCOIS)'                             00030001
+histkey='ISPWPRODL0000012A0000B5C'                                      00040001
+                                                                        00050001
+wRC=WZZCPY('REST','PDS',histkey,target)                                 00060001

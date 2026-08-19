@@ -1,0 +1,33 @@
+/* REXX */                                                              00010001
+                                                                        00020001
+address tso "ALLOC F(SYSPRINT) DA(*) SHR REUSE"                         00030001
+                                                                        00040001
+call get_load                                                           00050001
+say " "                                                                 00060001
+say "Testing ASML program" mbr                                          00070002
+address tso call "'"loadlib"("mbr")'"                                   00080001
+say "ASM test completed with RC="rc                                     00090002
+                                                                        00100001
+Exit                                                                    00110001
+                                                                        00120001
+get_load:                                                               00130001
+/* ----------------------------------------------------------------- */ 00140001
+/* Get name of load library to execute from                          */ 00150001
+/* For our test environment this is derived from the REXX library    */ 00160001
+/* we are executing from. The idea being you check out the rexx      */ 00170001
+/* and the program you want to test then you execute the REXX to     */ 00180001
+/* test the program.                                                 */ 00190001
+/* ----------------------------------------------------------------- */ 00200001
+                                                                        00210001
+  Parse source . . mbr dd ds . /* who am I */                           00220001
+  liblist = ''                                                          00230001
+  "ISPEXEC QBASELIB" dd "ID(liblist)"    /* get library concatenation */00240001
+  liblist = Translate(liblist,"  ",",'")                                00250001
+  Do ij = 1 to Words(liblist)                                           00260001
+     libmem = word(liblist,ij)"("mbr")"                                 00270001
+     If Sysdsn("'"libmem"'") = 'OK' Then Leave                          00280001
+     Else libmem = ''                                                   00290001
+   End                                                                  00300001
+  loadlib = LEFT(ds,LASTPOS('.',ds))||'LOAD'                            00310001
+  Say "Executing:" mbr "From" loadlib                                   00320001
+  Return                                                                00330001

@@ -1,0 +1,16 @@
+/* REXX
+ *
+ * Execute Generate Verification Samples
+ *
+ */
+
+  LOADLIB = "SALESSUP.ISPW.PLAY.DEV1.LOAD"
+  address tso "ALLOC F(SYSPRINT) DA(*) SHR REUSE"
+
+  /* Test PLI   */
+  say " "
+  say "Testing PLI program CLPLIM"
+  address tso call "'"loadlib"("clplim")'"
+  say "PLI test completed with RC="rc
+
+exit

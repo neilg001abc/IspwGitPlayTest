@@ -1,0 +1,9 @@
+/* REXX */
+username = sysvar('sysuid')
+say '<KEEP>'username
+say '<KEEP>Roses Are Red'
+say '<KEEP>    Violets are Blue'
+say '<KEEP>ISPW is Great'
+say '<KEEP>    and you''ll see, too!'
+say '<KEEP>    The END'
+exit

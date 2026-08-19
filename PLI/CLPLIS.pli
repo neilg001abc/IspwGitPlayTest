@@ -1,0 +1,3 @@
+  clplis: proc;
+    put skip list(' Message from PLI Subroutine CLPLIS');
+ end clplis;

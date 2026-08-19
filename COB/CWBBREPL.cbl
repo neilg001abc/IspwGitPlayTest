@@ -1,0 +1,20 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID.       CWBBREPL.
+
+       ENVIRONMENT DIVISION.
+       INPUT-OUTPUT SECTION.
+       FILE-CONTROL.
+
+       DATA DIVISION.
+       FILE SECTION.
+
+       WORKING-STORAGE SECTION.
+
+       COPY COPREPLA
+       REPLACING  ==:XXX-:== BY ==ZZ-==.
+
+       PROCEDURE DIVISION.
+
+           DISPLAY 'TOTO'.
+
+           STOP RUN.

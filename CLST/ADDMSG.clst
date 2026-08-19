@@ -1,0 +1,34 @@
+/* REXX */                                                              00010001
+                                                                        00020001
+applid='PLAY'                                                           00030002
+wtstrm='PLAY'                                                           00040002
+wtmclas='    '                                                          00050001
+wtmtype='CLST'                                                          00060002
+wtmname='FRANCOIS'                                                      00070004
+wtclvl='DEV1'                                                           00080001
+taskidx='7E4C54B1CFC0'                                                  00090004
+histflag=' '                                                            00100001
+taskid=X2C(taskidx)                                                     00110001
+                                                                        00120001
+baseid=0                                                                00130001
+baseclas='TASK'                                                         00140001
+imsgid=0                                                                00150001
+imsgtext='message from Francois'                                        00160002
+imsgacpt=' '              /* no clue what is this?????? */              00170002
+                                                                        00171002
+say 'applid' applid                                                     00180001
+say 'wtstrm' wtstrm                                                     00190001
+say 'wtmtype' wtmtype                                                   00200001
+say 'wtmclas' wtmclas                                                   00210001
+say 'wtmname' wtmname                                                   00220001
+say 'wtclvl' wtclvl                                                     00230001
+say 'histflag' histflag                                                 00240001
+say 'taskid' taskid                                                     00250001
+say 'baseclas' baseclas                                                 00260001
+say 'baseid' baseid                                                     00270001
+say 'imsgid' imsgid                                                     00280001
+say 'imsgtext' imsgtext                                                 00290001
+                                                                        00300001
+wRC=WZZTSI('IMPCTMSG','ADD')                                            00310001
+                                                                        00340001
+say wRC                                                                 00350001

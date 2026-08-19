@@ -1,0 +1,1 @@
+      * CETTE COPY est affichée car la condition est vraie

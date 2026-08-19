@@ -1,0 +1,1 @@
+      * >>>>>La copy BATCH est incluse<<<<<

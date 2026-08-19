@@ -1,0 +1,17 @@
+//BFRBXB0T JOB (MMC),'DEMO BMC',CLASS=A,                                00010002
+//  MSGCLASS=X,MSGLEVEL=(1,1),NOTIFY=&SYSUID,TIME=4                     00020002
+//*                                                                     00000203
+//*
+//*   EXECUTION JCL pour programmme qui plante
+//*
+//STEP1    EXEC PGM=CWXTCOB2,PARM=00001
+//STEPLIB  DD   DSN=CEE.SCEERUN,DISP=SHR
+//         DD DSN=SALESSUP.ISPW.PLAY.DEV1.LOAD,DISP=SHR
+//         DD DSN=SALESSUP.ISPW.PLAY.PRD.LOAD,DISP=SHR
+//*         DD   DSN=BFRBXB0.DEMTOPAZ.LOAD,DISP=SHR
+//         DD   DSN=SALESSUP.XE.LOAD,DISP=SHR
+//EMPFILE  DD   DSN=BFRBXB0.DEMTOPAZ.CWXTDATA,DISP=SHR
+//RPTFILE  DD   SYSOUT=*
+//SYSUDUMP DD   SYSOUT=*
+//SYSOUT   DD   SYSOUT=*
+//
