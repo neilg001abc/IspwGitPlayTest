@@ -9,7 +9,7 @@
       *  TRAINING SESSIONS.
       *  TEST IMPORT
       *  TEST XEBIA JEAN-DAVID                                      *
-      *                                                                *
+      *           a                                                    *
       *  INPUT FILE  - EMPLOYEE WAGE INFORMATION                       *
       *              - STORED IN XPEDITER/TSO SAMPLIB (CWXTDATA)       *
       *  OUTPUT FILE - EMPLOYEE COMPENSATION REPORT                    *
